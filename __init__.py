@@ -4,7 +4,7 @@ import serial
 import time
 import subprocess
 
-class GoKnightsSkill(MycroftSkill):
+class helloSkill(MycroftSkill):
 
     def __init__(self):
         super().__init__()
@@ -24,4 +24,4 @@ class GoKnightsSkill(MycroftSkill):
         pass
 
 def create_skill():
-    return GoKnightsSkill()
+    return helloSkill()

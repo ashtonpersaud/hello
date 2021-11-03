@@ -20,7 +20,9 @@ class helloSkill(MycroftSkill):
         serA.write(b"wave")
         serB = serial.Serial('/dev/ttyACM1', 9600, timeout=1)
         serB.flush()
+        time.sleep(1)
         serB.write(b"wave")
+        
         self.speak_dialog("Hello fellow knight")
       
 

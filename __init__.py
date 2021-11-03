@@ -15,13 +15,10 @@ class helloSkill(MycroftSkill):
 
     @intent_handler('greeting.intent')
     def handle_not_are_you_intent(self, message):
-        serA = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
-        serA.flush()
-        serA.write(b"wave")
-        serB = serial.Serial('/dev/ttyACM1', 9600, timeout=1)
-        serB.flush()
-        serB.write(b"wave")
-        time.sleep(1)
+        ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+        ser.flush()
+        ser.write(b"wave")
+        time.sleep(2)
         self.speak_dialog("Hello fellow knight")
       
 

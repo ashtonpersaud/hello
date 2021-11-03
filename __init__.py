@@ -19,7 +19,7 @@ class helloSkill(MycroftSkill):
         ser.flush()
         ser.write(b"wave")
         time.sleep(1.5)
-        self.speak_dialog("Hello fellow knight")
+        self.speak_dialog("What's up bitch")
       
 
     def stop(self):
